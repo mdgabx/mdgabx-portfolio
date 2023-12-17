@@ -1,6 +1,8 @@
-$primary-color: #26E1D8;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import 'animate.css';
+/* @import 'animate.css'; */
 
 @font-face {
   font-family: 'Quicksand';
@@ -11,6 +13,7 @@ $primary-color: #26E1D8;
   font-family: 'Poppins';
   src: url('./assets/fonts/Poppins-Medium.ttf') format('ttf');
 }
+
 
 
 
