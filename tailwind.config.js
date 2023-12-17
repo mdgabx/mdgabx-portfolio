@@ -5,11 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'poppins': ['Poppins', 'sans-serif'],
-      'quicksand': ['Quicksand', 'serif'] // Ensure fonts with spaces have " " surrounding it.
+    extend: {
+      fontFamily: {
+        'poppins': ['Poppins'],
+        'quicksand': ['Quicksand'] // Ensure fonts with spaces have " " surrounding it.
+      },
     },
-    extend: {},
   },
   plugins: [],
 }
