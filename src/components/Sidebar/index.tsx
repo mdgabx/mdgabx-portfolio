@@ -2,10 +2,10 @@ import { Link, NavLink } from 'react-router-dom';
 import wdbsaLogo from '../../assets/images/wdbsaLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons'
  
 const Sidebar:React.FC = () => (
-    <div className="bg-black">
+    <div className="bg-black relative">
         <Link className="logo"  to="/">
             <img src={wdbsaLogo} alt="wdbsa logo" width="150" height="150"/>
         </Link>
@@ -36,12 +36,46 @@ const Sidebar:React.FC = () => (
             </NavLink>
         </nav>
 
-        <ul className="">
+        <ul className="w-full absolute bottom-10 flex flex-col gap-4 items-center justify-center">
             <li>
-                <a>
+                <a
+                className="w-30"
+                target="_blank" 
+                rel="noreferrer"
+                >
                     <FontAwesomeIcon 
-                        icon={faLinkedin} 
+                        icon={faLinkedin}
+                        color="#4d4d4e"
+                        size="lg"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                    />
+                </a>
+            </li>
+
+            <li>
+                <a
+                target="_blank" 
+                rel="noreferrer"
+                >
+                    <FontAwesomeIcon 
+                        icon={faGithub}
                         color="#4d4d4e" 
+                        size="lg"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                    />
+                </a>
+            </li>
+
+            <li>
+                <a
+                target="_blank" 
+                rel="noreferrer"
+                >
+                    <FontAwesomeIcon 
+                        icon={faSkype}
+                        color="#4d4d4e" 
+                        size="lg"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
                     />
                 </a>
             </li>
