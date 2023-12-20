@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins'],
-        'quicksand': ['Quicksand'] // Ensure fonts with spaces have " " surrounding it.
+        'quicksand': ['Quicksand']
       },
     },
   },

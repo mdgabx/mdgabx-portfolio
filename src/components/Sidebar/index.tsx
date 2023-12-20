@@ -12,7 +12,7 @@ const Sidebar:React.FC = () => (
         <nav className="flex flex-col items-center justify-center gap-5">
             <NavLink to="/">
                 <FontAwesomeIcon
-                    icon={faHome} 
+                    icon={faHome}
                     color="#4d4d4e" 
                     style={{ height: '24px' }} 
                     className="hover:text-green-500 trasition duration-300 ease-in-out"
