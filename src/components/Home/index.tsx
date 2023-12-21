@@ -10,7 +10,7 @@ const Home = () => (
             <br />
             <h2 
             className="font-quicksand mb-10 text-teal-500 text-2xl tracking-widest w-1/2
-                italic
+                italic text-center
             ">
                 A software developer based in province of Bohol, Philippines. currently having fun
                 working with MERN stack.
