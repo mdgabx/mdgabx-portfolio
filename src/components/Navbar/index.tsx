@@ -1,42 +1,45 @@
 import { Link, NavLink } from 'react-router-dom';
 import wdbsaLogo from '../../assets/images/wdbsaLogo.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faGithub, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+// import { faGithub, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons'
  
-const Sidebar:React.FC = () => (
-    <div className="bg-black relative">
+const Navbar:React.FC = () => (
+    <div className="bg-black flex items-center justify-between relative px-10 font-quicksand text-white">
         <Link className="logo"  to="/">
-            <img src={wdbsaLogo} alt="wdbsa logo" width="150" height="150"/>
+            <img src={wdbsaLogo} alt="wdbsa logo" width="100" height="50"/>
         </Link>
-        <nav className="flex flex-col items-center justify-center gap-5">
+        <nav className="flex flex-row items-center justify-center gap-5">
             <NavLink to="/">
-                <FontAwesomeIcon
+                {/* <FontAwesomeIcon
                     icon={faHome}
                     color="#4d4d4e" 
-                    style={{ height: '24px' }} 
+                    style={{ height: '12px' }} 
                     className="hover:text-green-500 trasition duration-300 ease-in-out"
-                 />
+                 /> */}
+                 Home
             </NavLink>
             <NavLink to="/about">
-                <FontAwesomeIcon 
+                {/* <FontAwesomeIcon 
                     icon={faUser} 
                     color="#4d4d4e" 
-                    style={{ height: '24px' }}
+                    style={{ height: '12px' }}
                     className="hover:text-green-500 trasition duration-300 ease-in-out"
-                />
+                /> */}
+                About
             </NavLink>
             <NavLink to="/contact">
-                <FontAwesomeIcon 
+                {/* <FontAwesomeIcon 
                     icon={faEnvelope} 
                     color="#4d4d4e" 
-                    style={{ height: '24px' }} 
+                    style={{ height: '12px' }} 
                     className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    />
+                    /> */}
+                    Portfolio
             </NavLink>
         </nav>
 
-        <ul className="w-full absolute bottom-10 flex flex-col gap-4 items-center justify-center">
+        {/* <ul className="flex flex-row gap-4 items-center justify-center">
             <li>
                 <a
                 className="w-30"
@@ -79,9 +82,9 @@ const Sidebar:React.FC = () => (
                     />
                 </a>
             </li>
-        </ul>
+        </ul> */}
     </div>
 
 )
 
-export default Sidebar
+export default Navbar
