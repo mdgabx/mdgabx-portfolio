@@ -57,7 +57,7 @@ const Navbar = () => {
         </button>
 
         <nav className="flex hidden md:block space-x-5 flex-row items-center justify-center gap-5">
-          <NavLink to="/">
+          <NavLink to="/" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
             {/* <FontAwesomeIcon
                         icon={faHome}
                         color="#4d4d4e" 
@@ -66,16 +66,16 @@ const Navbar = () => {
                     /> */}
             Home
           </NavLink>
-          <NavLink to="/about">
+          <NavLink to="/skills" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
             {/* <FontAwesomeIcon 
                         icon={faUser} 
                         color="#4d4d4e" 
                         style={{ height: '12px' }}
                         className="hover:text-green-500 trasition duration-300 ease-in-out"
                     /> */}
-            About
+            Skills
           </NavLink>
-          <NavLink to="/contact">
+          <NavLink to="/contact" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
             {/* <FontAwesomeIcon 
                         icon={faEnvelope} 
                         color="#4d4d4e" 
@@ -95,10 +95,10 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/about"
+            to="/skills"
             className="block px-12 py-2 hover:bg-teal-700 rounded"
           >
-            About
+            Skills
           </NavLink>
           <NavLink
             to="/contact"

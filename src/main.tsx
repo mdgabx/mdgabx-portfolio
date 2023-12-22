@@ -4,13 +4,18 @@ import "./App.css"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Layout from "./components/Layout"
+import Skills from "./components/Skills"
+import Home from "./components/Home"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
-    children: [{}],
+    element: <Layout><Home /></Layout>,
   },
+  {
+    path: '/skills',
+    element: <Layout><Skills /></Layout>
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
