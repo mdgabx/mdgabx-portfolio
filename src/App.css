@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'animate.css';
+/* @import 'animate.css'; */
 
 @font-face {
   font-family: 'Quicksand';
