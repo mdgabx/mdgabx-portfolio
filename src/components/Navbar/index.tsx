@@ -87,7 +87,7 @@ const Navbar = () => {
         </nav>
       </header>
       {isOpen ? (
-        <div className="container text-white font-quicksand">
+        <div className="container text-white font-quicksand md:hidden">
           <NavLink
             to="/"
             className="block px-12 py-2 hover:bg-teal-700 rounded"
