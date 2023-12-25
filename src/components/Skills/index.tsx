@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Oval } from "react-spinner-loader"
 
 interface SkillsProp {
     id: number;
@@ -37,7 +38,13 @@ const Skills = () => {
                     </div>
                     ))
                 ) : (
-                    <div>Error Fetching skills data!</div>
+                    // <div>Error Fetching skills data!</div>
+                    <Oval
+                        height="80"
+                        width="80"
+                        radius="9"
+                        color="white"
+                    />
                 )}
                 </div>
             </div>

@@ -75,14 +75,14 @@ const Navbar = () => {
                     /> */}
             Skills
           </NavLink>
-          <NavLink to="/contact" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+          <NavLink to="/projects" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
             {/* <FontAwesomeIcon 
                         icon={faEnvelope} 
                         color="#4d4d4e" 
                         style={{ height: '12px' }} 
                         className="hover:text-green-500 trasition duration-300 ease-in-out"
                         /> */}
-            Portfolio
+            Projects
           </NavLink>
         </nav>
       </header>
@@ -101,10 +101,10 @@ const Navbar = () => {
             Skills
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/projects"
             className="block px-12 py-2 mb-3 hover:bg-teal-700 rounded"
           >
-            Portfolio
+            Projects
           </NavLink>
         </div>
       ) : (
