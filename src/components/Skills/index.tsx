@@ -4,6 +4,7 @@ import axios from "axios"
 interface SkillsProp {
     id: number;
     name: string;
+    logo: string;
 }
 
 const Skills = () => {
@@ -30,8 +31,9 @@ const Skills = () => {
                 <div className="p-2 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-4">
                 {Array.isArray(skills) && skills.length > 0 ? (
                     skills.map((skill) => (
-                    <div key={skill.id} className="flex font-quicksand px-4">
-                        {skill.name}
+                    <div key={skill.id} className="flex flex-col items-center justify-center font-quicksand px-4">
+                        <img src={`../src/assets/logos/${skill.logo}`} alt={skill.logo} width="60px" height="50px"  />
+                        <p className="my-2 mx-auto">{skill.name}</p>
                     </div>
                     ))
                 ) : (

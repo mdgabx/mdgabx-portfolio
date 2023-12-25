@@ -2,47 +2,58 @@
     "skills" : [
         {
             "id": 1,
-            "name": "HTML"
+            "name": "HTML",
+            "logo": "html5.svg"
         },
         {
             "id": 2,
-            "name": "CSS"
+            "name": "CSS",
+            "logo": "css3.svg"
         },
         {
             "id": 3,
-            "name": "Javascript"
+            "name": "Javascript",
+            "logo": "javascript.svg"
         },
         {
             "id": 4,
-            "name": "Tailwind"
+            "name": "Tailwind",
+            "logo": "tailwind.svg"
         },
         {
             "id": 5,
-            "name": "NodeJS"
+            "name": "NodeJS",
+            "logo": "node.svg"
         },
         {
             "id": 6,
-            "name": "Bootstrap"
+            "name": "Bootstrap",
+            "logo": "bootstrap.svg"
         },
         {
             "id": 7,
-            "name": "ReactJS"
+            "name": "ReactJS",
+            "logo": "reactjs.svg"
         },
         {
             "id": 8,
-            "name": "MongoDB"
+            "name": "MongoDB",
+            "logo": "mongo.svg"
         },
         {
             "id": 9,
-            "name": "Typescript"
+            "name": "Typescript",
+            "logo": "typescript.svg"
         },
         {
             "id": 10,
-            "name": "Sass"
+            "name": "Sass",
+            "logo": "sass.svg"
         },
         {
             "id": 11,
-            "name": "Redux Toolkit"
+            "name": "Redux Toolkit",
+            "logo": "redux.svg"
         }
     ]
 }
