@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Oval } from "react-spinner-loader"
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface SkillsProp {
     id: number;
@@ -26,10 +26,10 @@ const Skills = () => {
     }, [])
     
     return (
-        <div className="w-3/4 flex flex-col mx-auto items-center justify-center">
+        <div className="w-80 md:w-1/2 mx-auto">
             <div className="flex flex-col bg-white shadow-md shadow-black my-10 p-5 border-2 rounded-lg">
                 <h2 className="text-2xl font-poppins border-b border-gray-300 py-2">Technologies and Frameworks</h2>
-                <div className="p-2 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="p-2 md:p-10 grid grid-cols-2 md:grid-cols-4 gap-4 mx-auto">
                 {Array.isArray(skills) && skills.length > 0 ? (
                     skills.map((skill) => (
                     <div key={skill.id} className="flex flex-col items-center justify-center font-quicksand px-4">
@@ -38,12 +38,12 @@ const Skills = () => {
                     </div>
                     ))
                 ) : (
-                    // <div>Error Fetching skills data!</div>
-                    <Oval
-                        height="80"
-                        width="80"
-                        radius="9"
-                        color="white"
+                    <ClipLoader
+                        color="#111"
+                        loading={true}
+                        size={40}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
                     />
                 )}
                 </div>
