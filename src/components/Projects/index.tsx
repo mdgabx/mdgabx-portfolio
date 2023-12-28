@@ -38,15 +38,27 @@ const Projects = () => {
     const ProjectCard:React.FC<ProjectCardProps> = ({ project }) => {
         return (
             <div className="container">
-                <div className="flex flex-row shadow-lg rounded w-full p-10 my-4">
-                    <img 
-                        className="m-5" 
-                        src={`../src/assets/projects/${project.image}`} 
-                        alt={project.name} 
-                        width="400px" 
-                        height="340px" 
-                    />
-                    <h3 className="font-poppins text-lg my-4">{project.name}</h3>
+                <div className="flex flex-col shadow-md rounded w-full p-10 my-4">
+                    <div className="flex flex-col gap-5">
+                        <img 
+                            className="rounded mx-auto" 
+                            src={`../src/assets/projects/${project.image}`} 
+                            alt={project.name}
+                            style={{ width: '100%', height: 'auto' }}
+                        />
+                        <div className="container-fluid">
+                            <h3 className="font-poppins text-lg my-4">{project.name}</h3>
+                            <p>{project.description}</p>
+                            { project.technologies.map((tech, idx) => {
+                                return (
+                                    <p key={idx}>{tech}</p>
+                                )  
+                            })
+                            }
+                            <a type="button">{project.projectUrl}</a>
+                            <a type="button">{project.githubUrl}</a>
+                        </div>
+                    </div>
                 </div>    
             </div>
         )
@@ -55,7 +67,7 @@ const Projects = () => {
     return (
         <>
             <div className="container-fluid mx-auto flex flex-row items-center justify-center">
-                <div className="w-3/4 flex flex-col bg-white shadow-md my-10 p-5 border-2 rounded-lg">
+                <div className="w-10/12 md:w-8/12 flex flex-col bg-white shadow-md my-10 p-5 border-2 rounded-lg">
                     <h2 className="text-2xl font-poppins border-b border-gray-300 py-2">Projects</h2>
                     <div className="container flex flex-row items-center justify-center mx-auto w-full">
                         { projects.length === 0 ? (
@@ -69,7 +81,7 @@ const Projects = () => {
                                 />
                             </div>
                         ) : (
-                            <div className="w-100">
+                            <div className="relative flex flex-col" >
                                 { projects.map((project) => (
                                     <ProjectCard key={project.id} project={project} />
                                 ))
