@@ -46,8 +46,8 @@ const Projects = () => {
                             alt={project.name}
                             style={{ width: '100%', height: 'auto' }}
                         />
-                        <div className="container-fluid">
-                            <h3 className="font-poppins text-lg my-4">{project.name}</h3>
+                        <div className="container-fluid font-quicksand">
+                            <h3 className="font-quicksand italic text-xl my-4">{project.name}</h3>
                             <p>{project.description}</p>
                             { project.technologies.map((tech, idx) => {
                                 return (
@@ -55,8 +55,16 @@ const Projects = () => {
                                 )  
                             })
                             }
-                            <a type="button">{project.projectUrl}</a>
-                            <a type="button">{project.githubUrl}</a>
+                            <div className="flex flex-row items-center justify-evenly gap-5 my-4">
+                                <a 
+                                href={project.projectUrl} 
+                                target="_blank" 
+                                className="text-white bg-green-600 rounded-lg p-4 shadow shadow-green-300"
+                                >
+                                    Project URL
+                                    </a>
+                                <a href={project.githubUrl} target="_blank"  className="">Source Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>    
@@ -73,11 +81,10 @@ const Projects = () => {
                         { projects.length === 0 ? (
                             <div className="flex items-center justify-center w-100">
                                 <ClipLoader
-                                color="#111"
-                                loading={true}
-                                size={40}
-                                aria-label="Loading Spinner"
-                                data-testid="loader"
+                                    color="#111"
+                                    loading={true}
+                                    size={40}
+                                    aria-label="Loading Spinner"
                                 />
                             </div>
                         ) : (
