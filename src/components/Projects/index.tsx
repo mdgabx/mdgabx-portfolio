@@ -38,32 +38,50 @@ const Projects = () => {
     const ProjectCard:React.FC<ProjectCardProps> = ({ project }) => {
         return (
             <div className="container">
-                <div className="flex flex-col shadow-md rounded w-full p-10 my-4">
+                <div className="flex flex-col shadow-md rounded mx-auto w-90 lg:w-3/4 p-10 my-4">
                     <div className="flex flex-col gap-5">
+                        <h3 className="font-poppins text-emerald-800 text-xl">{project.name}</h3>
                         <img 
                             className="rounded mx-auto" 
                             src={`../src/assets/projects/${project.image}`} 
                             alt={project.name}
                             style={{ width: '100%', height: 'auto' }}
                         />
-                        <div className="container-fluid font-quicksand">
-                            <h3 className="font-quicksand italic text-xl my-4">{project.name}</h3>
-                            <p>{project.description}</p>
+                        <div className="container-fluid font-quicksand my-4">
+                           
+                            <p className="italic quote mx-auto my-5">{project.description}</p>
                             { project.technologies.map((tech, idx) => {
                                 return (
-                                    <p key={idx}>{tech}</p>
+                                    <span 
+                                    key={idx} 
+                                    className="inline-block bg-gray-300 rounded-xl px-2 py-1 text-xs
+                                        mx-1
+                                    "
+                                    >
+                                        {tech}
+                                    </span>
                                 )  
                             })
                             }
-                            <div className="flex flex-row items-center justify-evenly gap-5 my-4">
+                            <div className="flex flex-col lg:flex-row items-center justify-center gap-5 my-5">
                                 <a 
                                 href={project.projectUrl} 
                                 target="_blank" 
-                                className="text-white bg-green-600 rounded-lg p-4 shadow shadow-green-300"
+                                className="text-white bg-green-600 rounded-lg p-3 shadow shadow-green-300
+                                    hover:bg-green-600/70
+                                "
                                 >
                                     Project URL
-                                    </a>
-                                <a href={project.githubUrl} target="_blank"  className="">Source Code</a>
+                                </a>
+                                <a 
+                                href={project.githubUrl} 
+                                target="_blank"  
+                                className="border shadow border-black-800 p-3 rounded-lg hover:bg-green-600/70
+                                    hover:border-green-600 hover:text-white hover:shadow hover:shadow-green-300
+                                "
+                                >
+                                    Source Code
+                                </a>
                             </div>
                         </div>
                     </div>
