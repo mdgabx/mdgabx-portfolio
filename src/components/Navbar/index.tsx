@@ -84,6 +84,15 @@ const Navbar = () => {
                         /> */}
             Projects
           </NavLink>
+          <NavLink to="/contact" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+            {/* <FontAwesomeIcon 
+                        icon={faEnvelope} 
+                        color="#4d4d4e" 
+                        style={{ height: '12px' }} 
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                        /> */}
+            Contact
+          </NavLink>
         </nav>
       </header>
       {isOpen ? (
@@ -105,6 +114,12 @@ const Navbar = () => {
             className="block px-12 py-2 mb-3 hover:bg-teal-700 rounded"
           >
             Projects
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className="block px-12 py-2 mb-3 hover:bg-teal-700 rounded"
+          >
+            Contact
           </NavLink>
         </div>
       ) : (

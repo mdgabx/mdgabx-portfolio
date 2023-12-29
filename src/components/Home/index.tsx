@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 const Home = () => (
-  <div className="text-white m-20">
+  <div className="container-fluid text-white m-20">
     <div className="font-poppins flex flex-col items-center justify-center">
       <h1 className=" text-5xl md:text-[70px]">
         Hello, I'm

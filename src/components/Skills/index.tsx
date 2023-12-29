@@ -27,9 +27,9 @@ const Skills = () => {
     
     return (
         <div className="container-fluid mx-auto flex flex-row items-center justify-center">
-            <div className="flex flex-col bg-white shadow-md shadow-black my-10 p-5 border-2 rounded-lg">
+            <div className="flex flex-col w-9/12 bg-white shadow-md shadow-black my-10 p-5 border-2 rounded-lg">
                 <h2 className="text-2xl font-poppins border-b border-gray-300 py-2">Technologies and Frameworks</h2>
-                <div className="p-2 md:p-10 grid grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
+                <div className="p-2 md:p-10 grid grid-cols-2 lg:grid-cols-5 gap-4 mx-auto">
                 {Array.isArray(skills) && skills.length > 0 ? (
                     skills.map((skill) => (
                     <div key={skill.id} className="flex flex-col items-center justify-center font-quicksand px-4">
