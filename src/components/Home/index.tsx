@@ -13,8 +13,8 @@ const Home = () => (
                 italic text-center
             "
       >
-        A web developer based in the island province of Bohol, Philippines. currently
-        having fun working with MERN + Typescript.
+        A web developer based in the island province of Bohol, Philippines.
+        currently having fun working with MERN + Typescript.
       </h2>
       <Link
         to="/contact"

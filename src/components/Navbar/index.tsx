@@ -57,7 +57,10 @@ const Navbar = () => {
         </button>
 
         <nav className="flex hidden md:block space-x-5 flex-row items-center justify-center gap-5">
-          <NavLink to="/" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+          <NavLink
+            to="/"
+            className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
+          >
             {/* <FontAwesomeIcon
                         icon={faHome}
                         color="#4d4d4e" 
@@ -66,7 +69,10 @@ const Navbar = () => {
                     /> */}
             Home
           </NavLink>
-          <NavLink to="/skills" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+          <NavLink
+            to="/skills"
+            className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
+          >
             {/* <FontAwesomeIcon 
                         icon={faUser} 
                         color="#4d4d4e" 
@@ -75,7 +81,10 @@ const Navbar = () => {
                     /> */}
             Skills
           </NavLink>
-          <NavLink to="/projects" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+          <NavLink
+            to="/projects"
+            className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
+          >
             {/* <FontAwesomeIcon 
                         icon={faEnvelope} 
                         color="#4d4d4e" 
@@ -84,7 +93,10 @@ const Navbar = () => {
                         /> */}
             Projects
           </NavLink>
-          <NavLink to="/contact" className='hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4'>
+          <NavLink
+            to="/contact"
+            className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
+          >
             {/* <FontAwesomeIcon 
                         icon={faEnvelope} 
                         color="#4d4d4e" 
