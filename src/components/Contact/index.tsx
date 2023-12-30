@@ -1,4 +1,31 @@
+import { useRef } from "react"
+import emailjs from '@emailjs/browser'
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 const Contact = () => {
+  const refForm = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    if (refForm.current) {
+      emailjs.sendForm(
+        'service_4ztnlxp',
+        'template_qd9brpq',
+        refForm.current,
+        '1Ysc9i5Ic4v2bTGFw'
+      ).then(() => {
+        toast.success(`Email sent successfully`)
+      }, () => {
+        toast.error('Error sending email!')
+      }
+      )
+    } else {
+      console.error('Form reference is null');
+    }
+  }
+
   return (
     <div className="container-fluid mx-auto flex flex-row items-center justify-center">
       <div className="w-10/12 lg:w-9/12 flex flex-col bg-white shadow-md my-10 p-5 border-2 rounded-lg">
@@ -8,10 +35,10 @@ const Contact = () => {
           </h2>
           <p className="font-quicksand my-4">
             Get in touch or send me an email at{" "}
-            <strong>a.markdexter@gmail.com</strong>
+            <strong>wdbsamode@gmail.com</strong>
           </p>
           <div className="font-quicksand">
-            <form className="my-4">
+            <form className="my-4" ref={refForm} onSubmit={sendEmail}>
               <div className="flex flex-col gap-2 space-y-5">
                 <div className="flex flex-row w-full gap-3">
                   <input
