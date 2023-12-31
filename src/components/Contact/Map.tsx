@@ -1,4 +1,4 @@
-import { MapContainer, Marker, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L, { LatLngTuple } from 'leaflet';
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -16,11 +16,13 @@ const Map = () => {
   const position:LatLngTuple = [9.672948, 123.87300] || undefined;
 
   return (
-    <div className='h-[350px] border'>
+    <div className='h-[350px]'>
       <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
         <Marker position={position}>
-
+            <Popup>
+                <p className='font-quicksand'>Tagbilaran City, Bohol, Philippines</p>
+            </Popup>
         </Marker>
       </MapContainer>
     </div>

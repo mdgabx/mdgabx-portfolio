@@ -29,7 +29,7 @@ const Contact = () => {
 
   return (
     <div className="container-fluid mx-auto flex flex-col items-center justify-center">
-      <div className="w-10/12 lg:w-9/12  bg-white shadow-md my-10 p-5 border-2 rounded-lg">
+      <div className="w-10/12 lg:w-8/12  bg-white shadow-md my-10 p-5 border-2 rounded-lg">
       <Map />
         <div className="flex flex-row items-start justify-between">
       
