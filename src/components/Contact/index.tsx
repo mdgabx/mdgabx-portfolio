@@ -2,6 +2,7 @@ import { useRef } from "react"
 import emailjs from '@emailjs/browser'
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Map from './Map';
 
 const Contact = () => {
   const refForm = useRef<HTMLFormElement | null>(null);
@@ -27,9 +28,12 @@ const Contact = () => {
   }
 
   return (
-    <div className="container-fluid mx-auto flex flex-row items-center justify-center">
-      <div className="w-10/12 lg:w-9/12 flex flex-col bg-white shadow-md my-10 p-5 border-2 rounded-lg">
-        <div className="">
+    <div className="container-fluid mx-auto flex flex-col items-center justify-center">
+      <div className="w-10/12 lg:w-9/12  bg-white shadow-md my-10 p-5 border-2 rounded-lg">
+      <Map />
+        <div className="flex flex-row items-start justify-between">
+      
+          <div className="w-full">         
           <h2 className="text-2xl font-poppins border-b border-gray-300 py-2">
             Contact Me
           </h2>
@@ -37,6 +41,7 @@ const Contact = () => {
             Get in touch or send me an email at{" "}
             <strong>wdbsamode@gmail.com</strong>
           </p>
+       
           <div className="font-quicksand">
             <form className="my-4" ref={refForm} onSubmit={sendEmail}>
               <div className="flex flex-col gap-2 space-y-5">
@@ -83,7 +88,9 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            </div>
           </div>
+        
         </div>
       </div>
     </div>

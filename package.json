@@ -16,8 +16,10 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.6.2",
+    "leaflet": "^1.9.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.0",
     "react-spinner-loader": "^1.1.1",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@types/leaflet": "^1.9.8",
     "@types/node": "^20.10.4",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
