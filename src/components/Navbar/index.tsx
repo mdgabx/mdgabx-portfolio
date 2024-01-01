@@ -93,11 +93,15 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-            <a className="block px-12 py-2 hover:bg-teal-700 rounded" href="../../src/assets/resume/mdgabx-cv.pdf" download="markcv.pdf">
-              <button type="button" className="text-green-600">
-                Download CV
-              </button>
-            </a>
+          <a
+            className="block px-12 py-2 hover:bg-teal-700 rounded"
+            href="../../src/assets/resume/mdgabx-cv.pdf"
+            download="markcv.pdf"
+          >
+            <button type="button" className="text-green-600">
+              Download CV
+            </button>
+          </a>
           <NavLink
             to="/skills"
             className="block px-12 py-2 hover:bg-teal-700 rounded"
