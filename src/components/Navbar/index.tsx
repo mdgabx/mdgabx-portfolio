@@ -1,9 +1,6 @@
 import { Link, NavLink } from "react-router-dom"
 import wdbsaLogo from "../../assets/images/wdbsaLogo.png"
 import { useState } from "react"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faHome, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons'
-// import { faGithub, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,48 +58,29 @@ const Navbar = () => {
             to="/"
             className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
           >
-            {/* <FontAwesomeIcon
-                        icon={faHome}
-                        color="#4d4d4e" 
-                        style={{ height: '12px' }} 
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    /> */}
             Home
           </NavLink>
+          <a href="../../src/assets/resume/mdgabx-cv.pdf" download="markcv.pdf">
+            <button type="button" className="text-green-600">
+              Download CV
+            </button>
+          </a>
           <NavLink
             to="/skills"
             className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
           >
-            {/* <FontAwesomeIcon 
-                        icon={faUser} 
-                        color="#4d4d4e" 
-                        style={{ height: '12px' }}
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    /> */}
             Skills
           </NavLink>
           <NavLink
             to="/projects"
             className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
           >
-            {/* <FontAwesomeIcon 
-                        icon={faEnvelope} 
-                        color="#4d4d4e" 
-                        style={{ height: '12px' }} 
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                        /> */}
             Projects
           </NavLink>
           <NavLink
             to="/contact"
             className="hover:text-teal-600 hover:border-b-2 hover:border-teal-600 p-4"
           >
-            {/* <FontAwesomeIcon 
-                        icon={faEnvelope} 
-                        color="#4d4d4e" 
-                        style={{ height: '12px' }} 
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                        /> */}
             Contact
           </NavLink>
         </nav>
@@ -115,6 +93,11 @@ const Navbar = () => {
           >
             Home
           </NavLink>
+            <a className="block px-12 py-2 hover:bg-teal-700 rounded" href="../../src/assets/resume/mdgabx-cv.pdf" download="markcv.pdf">
+              <button type="button" className="text-green-600">
+                Download CV
+              </button>
+            </a>
           <NavLink
             to="/skills"
             className="block px-12 py-2 hover:bg-teal-700 rounded"
@@ -137,51 +120,6 @@ const Navbar = () => {
       ) : (
         <></>
       )}
-
-      {/* <ul className="flex flex-row gap-4 items-center justify-center">
-            <li>
-                <a
-                className="w-30"
-                target="_blank" 
-                rel="noreferrer"
-                >
-                    <FontAwesomeIcon 
-                        icon={faLinkedin}
-                        color="#4d4d4e"
-                        size="lg"
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    />
-                </a>
-            </li>
-
-            <li>
-                <a
-                target="_blank" 
-                rel="noreferrer"
-                >
-                    <FontAwesomeIcon 
-                        icon={faGithub}
-                        color="#4d4d4e" 
-                        size="lg"
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    />
-                </a>
-            </li>
-
-            <li>
-                <a
-                target="_blank" 
-                rel="noreferrer"
-                >
-                    <FontAwesomeIcon 
-                        icon={faSkype}
-                        color="#4d4d4e" 
-                        size="lg"
-                        className="hover:text-green-500 trasition duration-300 ease-in-out"
-                    />
-                </a>
-            </li>
-        </ul> */}
     </div>
   )
 }

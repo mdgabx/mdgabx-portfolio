@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
+import { faGithub, faLinkedin, faSkype } from '@fortawesome/free-brands-svg-icons'
 
 const Home = () => (
   <div className="container-fluid text-white m-20">
@@ -22,6 +24,53 @@ const Home = () => (
       >
         CONTACT ME
       </Link>
+        <ul className="flex flex-row gap-6 my-7">
+        <li>
+                <a
+                className="w-30"
+                href="https://www.linkedin.com/in/wdbsa-098233142/"
+                target="_blank" 
+                rel="noreferrer"
+                >
+                    <FontAwesomeIcon 
+                        icon={faLinkedin}
+                        color="#aaa"
+                        size="xl"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                    />
+                </a>
+            </li>
+
+            <li>
+                <a
+                href="https://github.com/mdgabx"
+                target="_blank" 
+                rel="noreferrer"
+                >
+                    <FontAwesomeIcon 
+                        icon={faGithub}
+                        color="#aaa"
+                        size="xl"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                    />
+                </a>
+            </li>
+
+            <li>
+                <a
+                target="_blank" 
+                rel="noreferrer"
+                href="live:a.markdexter"
+                >
+                    <FontAwesomeIcon 
+                        icon={faSkype}
+                        color="#aaa"
+                        size="xl"
+                        className="hover:text-green-500 trasition duration-300 ease-in-out"
+                    />
+                </a>
+            </li>
+        </ul>
     </div>
   </div>
 )

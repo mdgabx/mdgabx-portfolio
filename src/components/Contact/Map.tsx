@@ -13,7 +13,7 @@ const DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const Map = () => {
-  const position:LatLngTuple = [9.672948, 123.87300] || undefined;
+  const position:LatLngTuple = [9.8500, 124.1435] || undefined;
 
   return (
     <div className='h-[350px]'>
