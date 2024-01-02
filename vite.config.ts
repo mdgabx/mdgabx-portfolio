@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [
 
   ],
-  base: "/mdgabx-portfolio/",
   css: {
     postcss: {
       plugins: [
@@ -15,4 +14,5 @@ export default defineConfig({
       ],
     },
   },
+  base: "/mdgabx-portfolio/"
 });
