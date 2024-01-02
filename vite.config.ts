@@ -3,10 +3,10 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
-  base: '/mdgabx-portfolio',
   plugins: [
 
   ],
+  base: "/mdgabx-portfolio/",
   css: {
     postcss: {
       plugins: [
