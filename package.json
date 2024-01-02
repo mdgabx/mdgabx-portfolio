@@ -2,7 +2,7 @@
   "name": "mdgabx-portfolio",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://mdgabx.github.io/mdgabx-portfolio/",
+  "homepage": "https://mdgabx.github.io/",
   "type": "module",
   "scripts": {
     "predeploy" : "npm run build",
